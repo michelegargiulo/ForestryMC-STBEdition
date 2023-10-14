@@ -55,14 +55,13 @@ public class OreDictUtil {
 	public static final String CROP_DATE = "cropDate";
 	public static final String CROP_PAPAYA = "cropPapaya";
 	// New crops
-	public static final String CROP_ALMOND = "cropPapaya";
+	public static final String CROP_ALMOND = "cropAlmond";
 	public static final String CROP_APRICOT = "cropApricot";
 	public static final String CROP_AVOCADO = "cropAvocado";
 	public static final String CROP_BANANA = "cropBanana";
 	public static final String CROP_BREADFRUIT = "cropBreadfruit";
 	public static final String CROP_CASHEW = "cropCashew";
 	public static final String CROP_CEDAR = "cropCedar";
-	public static final String CROP_CINNAMON = "cropCinnamon";
 	public static final String CROP_DRAGONFRUIT = "cropDragonfruit";
 	public static final String CROP_DURIAN = "cropDurian";
 	public static final String CROP_FIG = "cropFig";
