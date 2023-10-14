@@ -1,3 +1,4 @@
+
 /*******************************************************************************
  * Copyright (c) 2011-2014 SirSengir.
  * All rights reserved. This program and the accompanying materials
@@ -294,6 +295,43 @@ public class ModuleArboriculture extends BlankForestryModule {
 		crateRegistry.registerCrate(EnumFruit.PLUM.getStack());
 		crateRegistry.registerCrate(EnumFruit.PAPAYA.getStack());
 		crateRegistry.registerCrate(EnumFruit.DATES.getStack());
+		crateRegistry.registerCrate(EnumFruit.ALMOND.getStack());
+		crateRegistry.registerCrate(EnumFruit.APRICOT.getStack());
+		crateRegistry.registerCrate(EnumFruit.AVOCADO.getStack());
+		crateRegistry.registerCrate(EnumFruit.BANANA.getStack());
+		crateRegistry.registerCrate(EnumFruit.BREADFRUIT.getStack());
+		crateRegistry.registerCrate(EnumFruit.CASHEW.getStack());
+		crateRegistry.registerCrate(EnumFruit.CEDAR.getStack());
+		crateRegistry.registerCrate(EnumFruit.DRAGONFRUIT.getStack());
+		crateRegistry.registerCrate(EnumFruit.DURIAN.getStack());
+		crateRegistry.registerCrate(EnumFruit.FIG.getStack());
+		crateRegistry.registerCrate(EnumFruit.GOOSEBERRY.getStack());
+		crateRegistry.registerCrate(EnumFruit.GRAPEFRUIT.getStack());
+		crateRegistry.registerCrate(EnumFruit.GUAVA.getStack());
+		crateRegistry.registerCrate(EnumFruit.HAZELNUT.getStack());
+		crateRegistry.registerCrate(EnumFruit.JACKFRUIT.getStack());
+		crateRegistry.registerCrate(EnumFruit.JUJUBA.getStack());
+		crateRegistry.registerCrate(EnumFruit.KIWI.getStack());
+		crateRegistry.registerCrate(EnumFruit.LIME.getStack());
+		crateRegistry.registerCrate(EnumFruit.LYCHEE.getStack());
+		crateRegistry.registerCrate(EnumFruit.MANGO.getStack());
+		crateRegistry.registerCrate(EnumFruit.NUTMEG.getStack());
+		crateRegistry.registerCrate(EnumFruit.OLIVE.getStack());
+		crateRegistry.registerCrate(EnumFruit.ORANGE.getStack());
+		crateRegistry.registerCrate(EnumFruit.PASSIONFRUIT.getStack());
+		crateRegistry.registerCrate(EnumFruit.PAWPAW.getStack());
+		crateRegistry.registerCrate(EnumFruit.PEACH.getStack());
+		crateRegistry.registerCrate(EnumFruit.PEAR.getStack());
+		crateRegistry.registerCrate(EnumFruit.PECAN.getStack());
+		crateRegistry.registerCrate(EnumFruit.PEPPERCORN.getStack());
+		crateRegistry.registerCrate(EnumFruit.PERSIMMON.getStack());
+		crateRegistry.registerCrate(EnumFruit.PISTACHIO.getStack());
+		crateRegistry.registerCrate(EnumFruit.POMEGRANATE.getStack());
+		crateRegistry.registerCrate(EnumFruit.RAMBUTAN.getStack());
+		crateRegistry.registerCrate(EnumFruit.SOURSOP.getStack());
+		crateRegistry.registerCrate(EnumFruit.STARFRUIT.getStack());
+		crateRegistry.registerCrate(EnumFruit.TAMARIND.getStack());
+		crateRegistry.registerCrate(EnumFruit.VANILLA.getStack());
 	}
 
 	@Override
@@ -445,13 +483,41 @@ public class ModuleArboriculture extends BlankForestryModule {
 				RecipeManagers.squeezerManager.addRecipe(20, EnumFruit.CHERRY.getStack(), new FluidStack(seedOil, 5 * seedOilMultiplier), mulch, 5);
 				RecipeManagers.squeezerManager.addRecipe(60, EnumFruit.WALNUT.getStack(), new FluidStack(seedOil, 18 * seedOilMultiplier), mulch, 5);
 				RecipeManagers.squeezerManager.addRecipe(70, EnumFruit.CHESTNUT.getStack(), new FluidStack(seedOil, 22 * seedOilMultiplier), mulch, 2);
+				// Harvestcraft
+				RecipeManagers.squeezerManager.addRecipe(70, EnumFruit.ALMOND.getStack(), new FluidStack(seedOil, 22 * seedOilMultiplier), mulch, 2);
+				RecipeManagers.squeezerManager.addRecipe(70, EnumFruit.CASHEW.getStack(), new FluidStack(seedOil, 22 * seedOilMultiplier), mulch, 2);
+				RecipeManagers.squeezerManager.addRecipe(70, EnumFruit.HAZELNUT.getStack(), new FluidStack(seedOil, 22 * seedOilMultiplier), mulch, 2);
+				RecipeManagers.squeezerManager.addRecipe(70, EnumFruit.NUTMEG.getStack(), new FluidStack(seedOil, 22 * seedOilMultiplier), mulch, 2);
+				RecipeManagers.squeezerManager.addRecipe(70, EnumFruit.PECAN.getStack(), new FluidStack(seedOil, 22 * seedOilMultiplier), mulch, 2);
+				RecipeManagers.squeezerManager.addRecipe(70, EnumFruit.PEPPERCORN.getStack(), new FluidStack(seedOil, 22 * seedOilMultiplier), mulch, 2);
+				RecipeManagers.squeezerManager.addRecipe(70, EnumFruit.PISTACHIO.getStack(), new FluidStack(seedOil, 22 * seedOilMultiplier), mulch, 2);
+				RecipeManagers.squeezerManager.addRecipe(70, EnumFruit.TAMARIND.getStack(), new FluidStack(seedOil, 22 * seedOilMultiplier), mulch, 2);
 			}
 			Fluid juice = Fluids.JUICE.getFluid();
 			if (juice != null) {
 				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.LEMON.getStack(), new FluidStack(juice, juiceMultiplier * 2), mulch, (int) Math.floor(mulchMultiplier * 0.5f));
 				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.PLUM.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 0.5f)), mulch, mulchMultiplier * 3);
 				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.PAPAYA.getStack(), new FluidStack(juice, juiceMultiplier * 3), mulch, (int) Math.floor(mulchMultiplier * 0.5f));
-				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.DATES.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 0.25)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.DATES.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 0.25f)), mulch, mulchMultiplier);
+				// Harvestcraft
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.APRICOT.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 1.5f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.AVOCADO.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 0.5f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.CEDAR.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 1.5f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.DRAGONFRUIT.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 0.75f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.FIG.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 1.25f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.GOOSEBERRY.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 0.75f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.GRAPEFRUIT.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 1.5f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.GUAVA.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 1.25f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.LIME.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 1.75f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.LYCHEE.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 0.75f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.MANGO.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 2.25f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.ORANGE.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 2.5f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.PASSIONFRUIT.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 1.25f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.PAWPAW.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 1.25f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.PEACH.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 2.5f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.PEAR.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 1.75f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.PERSIMMON.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 1.75f)), mulch, mulchMultiplier);
+				RecipeManagers.squeezerManager.addRecipe(10, EnumFruit.POMEGRANATE.getStack(), new FluidStack(juice, (int) Math.floor(juiceMultiplier * 1.0f)), mulch, mulchMultiplier);
 			}
 			RecipeUtil.addFermenterRecipes(new ItemStack(items.sapling, 1, OreDictionary.WILDCARD_VALUE), ForestryAPI.activeMode.getIntegerSetting("fermenter.yield.sapling"), Fluids.BIOMASS);
 		}

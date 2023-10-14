@@ -12,11 +12,14 @@ package forestry.core.items;
 
 import java.util.Locale;
 
+import forestry.core.config.Config;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -33,7 +36,47 @@ public class ItemFruit extends ItemForestryFood {
 		LEMON(OreDictUtil.CROP_LEMON),
 		PLUM(OreDictUtil.CROP_PLUM),
 		DATES(OreDictUtil.CROP_DATE),
-		PAPAYA(OreDictUtil.CROP_PAPAYA);
+		PAPAYA(OreDictUtil.CROP_PAPAYA),
+
+		// New crops
+		ALMOND(OreDictUtil.CROP_ALMOND),
+		APRICOT(OreDictUtil.CROP_APRICOT),
+		AVOCADO(OreDictUtil.CROP_AVOCADO),
+		BANANA(OreDictUtil.CROP_BANANA),
+		BREADFRUIT(OreDictUtil.CROP_BREADFRUIT),
+		CASHEW(OreDictUtil.CROP_CASHEW),
+		CEDAR(OreDictUtil.CROP_CEDAR),
+		DRAGONFRUIT(OreDictUtil.CROP_DRAGONFRUIT),
+		DURIAN(OreDictUtil.CROP_DURIAN),
+		FIG(OreDictUtil.CROP_FIG),
+		GOOSEBERRY(OreDictUtil.CROP_GOOSEBERRY),
+		GRAPEFRUIT(OreDictUtil.CROP_GRAPEFRUIT),
+		GUAVA(OreDictUtil.CROP_GUAVA),
+		HAZELNUT(OreDictUtil.CROP_HAZELNUT),
+		JACKFRUIT(OreDictUtil.CROP_JACKFRUIT),
+		JUJUBA(OreDictUtil.CROP_JUJUBA),
+		KIWI(OreDictUtil.CROP_KIWI),
+		LIME(OreDictUtil.CROP_LIME),
+		LYCHEE(OreDictUtil.CROP_LYCHEE),
+		MANGO(OreDictUtil.CROP_MANGO),
+		NUTMEG(OreDictUtil.CROP_NUTMEG),
+		OLIVE(OreDictUtil.CROP_OLIVE),
+		ORANGE(OreDictUtil.CROP_ORANGE),
+		PASSIONFRUIT(OreDictUtil.CROP_PASSIONFRUIT),
+		PAWPAW(OreDictUtil.CROP_PAWPAW),
+		PEACH(OreDictUtil.CROP_PEACH),
+		PEAR(OreDictUtil.CROP_PEAR),
+		PECAN(OreDictUtil.CROP_PECAN),
+		PEPPERCORN(OreDictUtil.CROP_PEPPERCORN),
+		PERSIMMON(OreDictUtil.CROP_PERSIMMON),
+		PISTACHIO(OreDictUtil.CROP_PISTACHIO),
+		POMEGRANATE(OreDictUtil.CROP_POMEGRANATE),
+		RAMBUTAN(OreDictUtil.CROP_RAMBUTAN),
+		SOURSOP(OreDictUtil.CROP_SOURSOP),
+		STARFRUIT(OreDictUtil.CROP_STARFRUIT),
+		TAMARIND(OreDictUtil.CROP_TAMARIND),
+		VANILLA(OreDictUtil.CROP_VANILLA),
+		;
 		//, COCONUT("cropCoconut");
 		public static final EnumFruit[] VALUES = values();
 

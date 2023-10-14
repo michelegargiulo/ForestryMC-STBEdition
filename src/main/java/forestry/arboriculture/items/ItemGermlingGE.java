@@ -192,10 +192,18 @@ public class ItemGermlingGE extends ItemGE implements IVariableFermentable, ICol
 		// x, y, z are the coordinates of the block "hit", can thus either be the soil or tall grass, etc.
 		IBlockState hitBlock = worldIn.getBlockState(pos);
 		if (!hitBlock.getBlock().isReplaceable(worldIn, pos)) {
-			if (!worldIn.isAirBlock(pos.up())) {
-				return new ActionResult<>(EnumActionResult.FAIL, itemStackIn);
+
+			if (tree.growsDownward()) {
+				if (!worldIn.isAirBlock(pos.down())) {
+					return new ActionResult<>(EnumActionResult.FAIL, itemStackIn);
+				}
+				pos = pos.down();
+			} else {
+				if (!worldIn.isAirBlock(pos.up())) {
+					return new ActionResult<>(EnumActionResult.FAIL, itemStackIn);
+				}
+				pos = pos.up();
 			}
-			pos = pos.up();
 		}
 
 		if (tree.canStay(worldIn, pos)) {

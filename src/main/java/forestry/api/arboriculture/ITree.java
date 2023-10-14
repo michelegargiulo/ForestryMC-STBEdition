@@ -90,4 +90,6 @@ public interface ITree extends IIndividual, ITreeGenData {
 	boolean isPureBred(EnumTreeChromosome chromosome);
 
 	boolean canBearFruit();
+
+	boolean growsDownward();
 }

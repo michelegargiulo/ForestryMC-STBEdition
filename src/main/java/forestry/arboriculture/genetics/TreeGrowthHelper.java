@@ -22,7 +22,12 @@ public class TreeGrowthHelper {
 			return null;
 		}
 
-		if (!hasRoom(world, growthPos, expectedGirth, expectedHeight)) {
+		int actualHeight = expectedHeight;
+		/*if (genome.getPrimary().getBranch().getName().equals(TreeBranchDefinition.INVERSUS.getBranch().getName())) {
+			actualHeight *= -1;
+		}*/
+
+		if (!hasRoom(world, growthPos, expectedGirth, actualHeight)) {
 			return null;
 		}
 

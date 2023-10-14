@@ -60,6 +60,53 @@ public enum TreeBranchDefinition implements IBranchDefinition {
 	TECTONA,
 	TILIA,
 
+	// Harvestcraft
+	ANNONANCEAE,
+	ANACARDIACEAE,
+	CACTACEAE,
+	EBENACEAE,
+	FABACEAE,
+	FICUS,
+	GROSSULARIACEAE,
+	JUGLANDACEAE,
+	LAURACEAE,
+	LYTHRACEAE,
+	MALVACEAE,
+	MORACEAE,
+	MUSA,
+	MYRISTICACEAE,
+	MYRTACEAE,
+	OLEACEAE,
+	ORCHIDACEAE,
+	OXALYDACEAE,
+	PASSIFLORACEAE,
+	PERSEA,
+	PIPERACEAE,
+	RHAMNACEAE,
+	ROSACEAE,
+	SAPINDACEAE,
+
+	// Custom
+	ACTINIDIACEAE,
+	TAXACEAE,
+
+	/*
+	// Immersive Intelligence
+	EUPHORBIACEAE,
+
+	// Natura
+	INVERSUS,
+
+	// Oceanic Expanse
+	ARECACEAE,
+
+	// Quark
+
+
+	// RandomThings
+	INTACTILIACEAE,
+	 */
+
 	// unclassified
 	CARICA,
 	TROPICAL(""),

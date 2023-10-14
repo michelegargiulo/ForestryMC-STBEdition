@@ -1,11 +1,9 @@
 package forestry.core.worldgen;
 
-import javax.annotation.Nullable;
-import java.util.EnumSet;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
-
+import forestry.api.world.ITreeGenData;
+import forestry.arboriculture.worldgen.ITreeBlockType;
+import forestry.arboriculture.worldgen.TreeBlockType;
+import forestry.core.utils.VectUtil;
 import net.minecraft.block.BlockVine;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -14,10 +12,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3i;
 import net.minecraft.world.World;
 
-import forestry.api.world.ITreeGenData;
-import forestry.arboriculture.worldgen.ITreeBlockType;
-import forestry.arboriculture.worldgen.TreeBlockType;
-import forestry.core.utils.VectUtil;
+import javax.annotation.Nullable;
+import java.util.EnumSet;
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Set;
 
 public class WorldGenHelper {
 
@@ -30,6 +29,19 @@ public class WorldGenHelper {
 		if (replaceMode.canReplace(blockState, world, pos)) {
 			type.setBlock(world, pos);
 			return true;
+		}
+
+		return false;
+	}
+
+	public static boolean setBlock(World world, BlockPos pos, IBlockState blockState, EnumReplaceMode replaceMode) {
+		if (!world.isBlockLoaded(pos)) {
+			return false;
+		}
+
+		IBlockState targetBlockState = world.getBlockState(pos);
+		if (replaceMode.canReplace(targetBlockState, world, pos)) {
+			return world.setBlockState(pos, blockState);
 		}
 
 		return false;
@@ -159,6 +171,36 @@ public class WorldGenHelper {
 					}
 
 					BlockPos pos = startPos.add(x + xOffset, y, z + zOffset);
+					addBlock(world, pos, wood, EnumReplaceMode.ALL);
+					addVines(world, rand, pos, vinesChance);
+
+					if (y + 1 == height) {
+						treeTops.add(pos);
+					}
+				}
+			}
+		}
+
+		return treeTops;
+	}
+
+	public static Set<BlockPos> generateUpsideDownTreeTrunk(
+			World world,
+			Random rand,
+			ITreeBlockType wood,
+			BlockPos startPos,
+			int height,
+			int girth,
+			int yStart,
+			float vinesChance
+	) {
+		Set<BlockPos> treeTops = new HashSet<>();
+
+		for (int x = 0; x < girth; x++) {
+			for (int z = 0; z < girth; z++) {
+				for (int y = yStart; y >= yStart - height + 1; y--) { // generating top-down is faster for lighting calculations
+
+					BlockPos pos = startPos.add(x, y, z);
 					addBlock(world, pos, wood, EnumReplaceMode.ALL);
 					addVines(world, rand, pos, vinesChance);
 

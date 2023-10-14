@@ -143,6 +143,8 @@ public class Config {
 	// Charcoal
 	public static int charcoalAmountBase = 8;
 	public static int charcoalWallCheckRange = 16;
+	public static String charcoalPitSecondaryItem = "forestry:ash";
+	public static int charcoalPitSecondaryItemMeta = 0;
 
 
 	public static boolean isStructureEnabled(String uid) {
@@ -322,6 +324,9 @@ public class Config {
 
 		charcoalAmountBase = configCommon.getIntLocalized("tweaks.charcoal", "amount.base", charcoalAmountBase, 0, 63);
 		charcoalWallCheckRange = configCommon.getIntLocalized("tweaks.charcoal", "check.range", charcoalWallCheckRange, 1, 32);
+		charcoalPitSecondaryItem = configCommon.getStringLocalized("tweaks.charcoal", "custom.item", "forestry:ash");
+		charcoalPitSecondaryItemMeta = configCommon.getIntLocalized("tweaks.charcoal", "custom.item_meta", charcoalPitSecondaryItemMeta, 0, 65535);
+
 
 		String[] availableStructures = new String[]{"alveary3x3", "farm3x3", "farm3x4", "farm3x5", "farm4x4", "farm5x5"};
 		String[] disabledStructureArray = disabledStructures.toArray(new String[disabledStructures.size()]);

@@ -12,7 +12,7 @@ public enum EnumForestryWoodType implements IWoodType {
 	LARCH,
 	TEAK,
 	ACACIA,
-	LIME,
+	SILVERLIME,
 	CHESTNUT,
 	WENGE,
 	BAOBAB,
@@ -40,7 +40,141 @@ public enum EnumForestryWoodType implements IWoodType {
 	IPE,
 	PADAUK,
 	COCOBOLO,
-	ZEBRAWOOD;
+	ZEBRAWOOD,
+
+
+	// Harvestcraft
+	ALMOND,
+	APRICOT,
+	AVOCADO,
+	BANANA,
+	BREADFRUIT,
+	CASHEW,
+	CEDAR,
+	CINNAMON,
+	DRAGONFRUIT,
+	DURIAN,
+	FIG,
+	GOOSEBERRY,
+	GRAPEFRUIT,
+	GUAVA,
+	HAZELNUT,
+	JACKFRUIT,
+	JUJUBA,
+	KIWI,
+	LIME,
+	LYCHEE,
+	MANGO,
+	NUTMEG,
+	OLIVE,
+	ORANGE,
+	PAPERBARK,
+	PASSIONFRUIT,
+	PAWPAW,
+	PEACH,
+	PEAR,
+	PECAN,
+	PEPPERCORN,
+	PERSIMMON,
+	PISTACHIO,
+	POMEGRANATE,
+	RAMBUTAN,
+	SOURSOP,
+	STARFRUIT,
+	TAMARIND,
+	VANILLA,
+	YEW,
+
+	/*
+	// Extra Utilities
+
+	// Immersive Intelligence
+	RUBBER,
+
+	// Integrated Dynamics
+	MENRIL,
+
+	// Natura
+	SILVER_MAPLE,
+	SILVERBELL,
+	AMARANTH,
+	TIGERWOOD,
+	SALIX,
+	SAKURA,
+	EUCALYPTUS,
+	HOPSEED,
+	REDWOOD,
+
+	BLOODWOOD(){
+
+		@Override
+		public String getPlankTexture() {
+			if (Config.compatNaturaEnabled && ModUtil.isModLoaded("natura")) {
+				return "natura:blocks/planks/nether/bloodwood_planks.png";
+			} else return "forestry:blocks/wood/planks." + getName();
+		}
+
+		@Override
+		public String getDoorLowerTexture() {
+			if (Config.compatNaturaEnabled && ModUtil.isModLoaded("natura")) {
+				return "natura:blocks/doors/bloodwood/bloodwood_door_bottom.png";
+			} else return "forestry:blocks/doors/" + getName() + "_lower";
+		}
+
+		@Override
+		public String getDoorUpperTexture() {
+			if (Config.compatNaturaEnabled && ModUtil.isModLoaded("natura")) {
+				return "natura:blocks/doors/bloodwood/bloodwood_door_top.png";
+			} else return "forestry:blocks/doors/" + getName() + "_upper";
+		}
+
+		@Override
+		public String getBarkTexture() {
+			if (Config.compatNaturaEnabled && ModUtil.isModLoaded("natura")) {
+				return "natura:blocks/logs/nether/bloodwood_bark.png";
+			} else return "forestry:blocks/wood/bark." + getName();
+		}
+
+		@Override
+		public String getHeartTexture() {
+			if (Config.compatNaturaEnabled && ModUtil.isModLoaded("natura")) {
+				return "natura:blocks/logs/nether/bloodwood_hearth.png";
+			} else return "forestry:blocks/wood/heart." + getName();
+		}
+	},
+	DARKWOOD,
+	FUSEWOOD,
+	GHOSTWOOD,
+
+	// Oceanic Expanse
+	COCONUT,
+
+	// Quark
+	SWAMP_OAK,
+	BLOSSOMING,
+
+	// RandomThings
+	SPECTRE,
+
+	// Thaumcraft
+	GREATWOOD,
+	SILVERWOOD,
+
+	// Tinkers Construct
+	GREEN_SLIME,
+	PURPLE_SLIME,
+	BLUE_SLIME,
+
+	// Twilight Forest
+	CANOPY,
+	TWILIGHT_OAK,
+
+	// Witchery
+	ALDER,
+	HAWTHORN,
+	ROWAN
+	*/
+	;
 
 	public static final float DEFAULT_HARDNESS = 2.0f;
 	public static final EnumForestryWoodType[] VALUES = values();

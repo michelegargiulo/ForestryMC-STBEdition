@@ -23,6 +23,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
@@ -34,6 +35,7 @@ import com.mojang.authlib.GameProfile;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
 
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -144,6 +146,11 @@ public class Tree extends Individual implements ITree, IPlantable {
 
 	@Override
 	public boolean canStay(IBlockAccess world, BlockPos pos) {
+
+		if (this.growsDownward()) {
+			return world.getBlockState(pos.up()).getBlock().getRegistryName().toString().equals("minecraft:netherrack");
+		}
+
 		BlockPos blockPos = pos.down();
 		IBlockState blockState = world.getBlockState(blockPos);
 
@@ -406,5 +413,12 @@ public class Tree extends Individual implements ITree, IPlantable {
 	@Override
 	public NonNullList<ItemStack> produceStacks(World world, BlockPos pos, int ripeningTime) {
 		return genome.getFruitProvider().getFruits(genome, world, pos, ripeningTime);
+	}
+
+	@Override
+	public boolean growsDownward() {
+		// Hardcoded Downwards-growing trees
+		//return genome.getPrimary().getBranch().getName().equals(TreeBranchDefinition.INVERSUS.getBranch().getName());
+		return false;
 	}
 }

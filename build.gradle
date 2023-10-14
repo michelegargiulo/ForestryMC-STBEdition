@@ -11,13 +11,12 @@ buildscript {
 
 plugins {
 	id "com.matthewprenger.cursegradle" version "1.0.9"
-	id 'se.bjurr.gitchangelog.git-changelog-gradle-plugin' version '1.64'
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'idea'
 apply plugin: 'maven'
 
-version = version_major + '.' + version_minor + '.' + version_patch + '.' + getBuildNumber()
+version = '5.8.4'
 if (project.hasProperty('buildQualifier')) {
 	version = project.version + '-' + project.buildQualifier
 }
@@ -36,7 +35,7 @@ minecraft {
 	mappings = mcp_mappings
 
 	replace '@VERSION@', project.version
-	replace '@BUILD_NUMBER@', getBuildNumber()
+	// replace '@BUILD_NUMBER@', getBuildNumber()
 }
 
 repositories {
@@ -46,16 +45,27 @@ repositories {
 	maven {
 		url "http://dvs1.progwml6.com/files/maven"
 	}
-	maven {
+	/*maven {
 		name = "ic2"
 		url = "http://maven.ic2.player.to/"
-	}
+	}*/
 	maven {
 		name = "Modmuss50"
 		url = "http://maven.modmuss50.me"
 	}
 	maven {
 		url = 'https://mod-buildcraft.com/maven'
+	}
+	maven {
+		url = 'https://modmaven.dev/'
+	}
+	maven {
+		name 'Curseforge Maven' // Baubles + Thaumcraft
+		url 'http://minecraft.curseforge.com/api/maven/'
+	}
+	maven {
+		name 'CurseMaven'
+		url 'https://www.cursemaven.com/'
 	}
 }
 
@@ -115,6 +125,7 @@ task sourcesJar(type: Jar) {
 	classifier = 'sources'
 }
 
+/*
 task apiJar(type: Jar) {
 	// TODO: when FG bug is fixed, remove allSource from the api jar.
 	// https://github.com/MinecraftForge/ForgeGradle/issues/369
@@ -144,26 +155,4 @@ uploadArchives {
 
 def getBuildNumber() {
 	return "$System.env.BUILD_NUMBER" != "null" ? "$System.env.BUILD_NUMBER" : "0"
-}
-
-task makeChangelog(type: se.bjurr.gitchangelog.plugin.gradle.GitChangelogTask) {
-	file = new File("changelog.html")
-	untaggedName = "Current release ${project.version}"
-	fromCommit = "5a3850c2642e535656d090d1473054d5fa8d3331"
-	toRef = "HEAD"
-	templateContent = file('changelog.mustache').getText('UTF-8')
-}
-
-curseforge {
-	apiKey = project.hasProperty('curseforge_apikey') ? project.curseforge_apikey : '0'
-	project {
-		id = curse_project_id
-		changelog = file('changelog.html')
-		changelogType = 'html'
-		releaseType = 'beta'
-	}
-}
-
-afterEvaluate {
-	tasks.curseforge59751.dependsOn.add(makeChangelog)
-}
+}*/
