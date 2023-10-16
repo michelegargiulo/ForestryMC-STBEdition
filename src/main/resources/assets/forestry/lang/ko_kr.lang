@@ -85,7 +85,7 @@ for.flowers.vanilla=꽃
 for.flowers.wheat=밀
 for.flowers.snow=눈
 
-fluid.bio.ethanol=에탄올
+fluid.ethanol=에탄올
 fluid.biomass=바이오매스
 fluid.glass=액체 유리
 fluid.for.honey=꿀
@@ -93,9 +93,9 @@ fluid.ice=파쇄된 얼음
 fluid.juice=과일 주스
 fluid.short.mead=벌꿀 술
 fluid.milk=우유
-fluid.seed.oil=씨앗 기름
+fluid.seed_oil=씨앗 기름
 
-tile.forestry.fluid.bio.ethanol.name=에탄올
+tile.forestry.fluid.ethanol.name=에탄올
 tile.forestry.fluid.biomass.name=바이오매스
 tile.forestry.fluid.glass.name=액체 유리
 tile.forestry.fluid.for.honey.name=꿀
@@ -103,7 +103,7 @@ tile.forestry.fluid.ice.name=파쇄된 얼음
 tile.forestry.fluid.juice.name=과일 주스
 tile.forestry.fluid.short.mead.name=벌꿀 술
 tile.forestry.fluid.milk.name=우유
-tile.forestry.fluid.seed.oil.name=씨앗 기름
+tile.forestry.fluid.seed_oil.name=씨앗 기름
 
 for.gui.access=접근
 for.gui.active=활성화

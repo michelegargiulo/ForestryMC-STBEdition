@@ -142,7 +142,7 @@ public class ModuleMail extends BlankForestryModule {
 					'X', stampDefinition.getCraftingIngredient(),
 					'#', Items.PAPER,
 					'Z', stampGlue);
-				RecipeManagers.carpenterManager.addRecipe(10, Fluids.SEED_OIL.getFluid(300), ItemStack.EMPTY, stamps,
+				RecipeManagers.carpenterManager.addRecipe(10, Fluids.SEED__OIL.getFluid(300), ItemStack.EMPTY, stamps,
 					"XXX",
 					"###",
 					'X', stampDefinition.getCraftingIngredient(),

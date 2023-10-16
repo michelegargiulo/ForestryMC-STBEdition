@@ -41,7 +41,7 @@ public class PluginEnderIO extends BlankForestryModule {
 
 	@Override
 	public void doInit() {
-		Fluid ethanol = Fluids.BIO_ETHANOL.getFluid();
+		Fluid ethanol = Fluids.ETHANOL.getFluid();
 		if (ethanol != null) {
 			int ethanolBurnTime = Math.round(Constants.ENGINE_CYCLE_DURATION_ETHANOL * ForestryAPI.activeMode.getFloatSetting("fuel.ethanol.combustion"));
 			addFuel(ethanol, 40, ethanolBurnTime);

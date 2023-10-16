@@ -29,7 +29,7 @@ public class PluginAgriCraft extends CompatPlugin {
 		int seedAmount = ForestryAPI.activeMode.getIntegerSetting("squeezer.liquid.seed");
 		Item seedItem = getItem("agri_seed");
 		if (seedItem != null) {
-			FluidStack fluid = Fluids.SEED_OIL.getFluid(seedAmount);
+			FluidStack fluid = Fluids.SEED__OIL.getFluid(seedAmount);
 			if (fluid != null) {
 				RecipeManagers.squeezerManager.addRecipe(10, new ItemStack(seedItem), fluid);
 			}

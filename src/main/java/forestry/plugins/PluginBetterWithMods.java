@@ -41,7 +41,7 @@ public class PluginBetterWithMods extends CompatPlugin {
 
 			farmRegistry.registerFarmables(ForestryFarmIdentifier.CROPS, new FarmableDoubleCrop(hempSeed, planted, mature, topMature, true));
 
-			RecipeManagers.squeezerManager.addRecipe(10, hempSeed, Fluids.SEED_OIL.getFluid(seedAmount));
+			RecipeManagers.squeezerManager.addRecipe(10, hempSeed, Fluids.SEED__OIL.getFluid(seedAmount));
 		}
 	}
 }

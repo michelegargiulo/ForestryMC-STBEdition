@@ -1,9 +1,9 @@
 {
   "forge_marker": 1,
   "variants": {
-    "bio.ethanol": {
+    "ethanol": {
       "model": "forge:fluid",
-      "custom": { "fluid": "bio.ethanol" }
+      "custom": { "fluid": "ethanol" }
     },
     "biomass": {
       "model": "forge:fluid",
@@ -33,9 +33,9 @@
       "model": "forge:fluid",
       "custom": { "fluid": "milk" }
     },
-    "seed.oil": {
+    "seed_oil": {
       "model": "forge:fluid",
-      "custom": { "fluid": "seed.oil" }
+      "custom": { "fluid": "seed_oil" }
     },
     "short.mead": {
       "model": "forge:fluid",

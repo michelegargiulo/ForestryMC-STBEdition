@@ -193,7 +193,7 @@ public class PluginHarvestCraft extends CompatPlugin {
 
 		juiceAmount = Math.max(juiceAmount, 1); // Produce at least 1 mb of juice.
 		Fluid juice = Fluids.JUICE.getFluid();
-		Fluid seedOil = Fluids.SEED_OIL.getFluid();
+		Fluid seedOil = Fluids.SEED__OIL.getFluid();
 		for (String berryName : berries) {
 			ItemStack berry = getItemStack(berryName + "item");
 			ItemStack berrySeed = getItemStack(berryName + "seeditem");

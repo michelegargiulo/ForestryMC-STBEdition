@@ -478,7 +478,7 @@ public class ModuleArboriculture extends BlankForestryModule {
 			int juiceMultiplier = ForestryAPI.activeMode.getIntegerSetting("squeezer.liquid.apple");
 			int mulchMultiplier = ForestryAPI.activeMode.getIntegerSetting("squeezer.mulch.apple");
 			ItemStack mulch = new ItemStack(coreItems.mulch);
-			Fluid seedOil = Fluids.SEED_OIL.getFluid();
+			Fluid seedOil = Fluids.SEED__OIL.getFluid();
 			if (seedOil != null) {
 				RecipeManagers.squeezerManager.addRecipe(20, EnumFruit.CHERRY.getStack(), new FluidStack(seedOil, 5 * seedOilMultiplier), mulch, 5);
 				RecipeManagers.squeezerManager.addRecipe(60, EnumFruit.WALNUT.getStack(), new FluidStack(seedOil, 18 * seedOilMultiplier), mulch, 5);

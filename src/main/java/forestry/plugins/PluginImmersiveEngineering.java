@@ -55,7 +55,7 @@ public class PluginImmersiveEngineering extends CompatPlugin {
 					IBlockState topMature = defaultState.withProperty(age, (Comparable) top0.get());
 
 					farmRegistry.registerFarmables(ForestryFarmIdentifier.CROPS, new FarmableDoubleCrop(hempSeed, planted, mature, topMature, true));
-					FluidStack seedOil = Fluids.SEED_OIL.getFluid(seedAmount);
+					FluidStack seedOil = Fluids.SEED__OIL.getFluid(seedAmount);
 					if (seedOil != null) {
 						RecipeManagers.squeezerManager.addRecipe(10, hempSeed, seedOil);
 					}

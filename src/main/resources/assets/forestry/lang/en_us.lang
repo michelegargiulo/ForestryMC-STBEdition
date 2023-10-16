@@ -81,7 +81,7 @@ for.flowers.vanilla=Flowers
 for.flowers.wheat=Wheat
 for.flowers.snow=Snow
 
-fluid.bio.ethanol=Ethanol
+fluid.ethanol=Ethanol
 fluid.biomass=Biomass
 fluid.glass=Liquid Glass
 fluid.for.honey=Honey
@@ -89,9 +89,9 @@ fluid.ice=Crushed Ice
 fluid.juice=Fruit Juice
 fluid.short.mead=Short Mead
 fluid.milk=Milk
-fluid.seed.oil=Seed Oil
+fluid.seed_oil=Seed Oil
 
-tile.forestry.fluid.bio.ethanol.name=Ethanol
+tile.forestry.fluid.ethanol.name=Ethanol
 tile.forestry.fluid.biomass.name=Biomass
 tile.forestry.fluid.glass.name=Liquid Glass
 tile.forestry.fluid.for.honey.name=Honey
@@ -99,7 +99,7 @@ tile.forestry.fluid.ice.name=Crushed Ice
 tile.forestry.fluid.juice.name=Fruit Juice
 tile.forestry.fluid.short.mead.name=Short Mead
 tile.forestry.fluid.milk.name=Milk
-tile.forestry.fluid.seed.oil.name=Seed Oil
+tile.forestry.fluid.seed_oil.name=Seed Oil
 
 for.gui.access=Access
 for.gui.active=Active

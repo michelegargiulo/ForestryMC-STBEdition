@@ -52,7 +52,7 @@ public class PluginRoots extends CompatPlugin {
 			Block block = getBlock(crops.get(i));
 			ItemStack fruit = getItemStack(fruits.get(i));
 			if (seed != null && i != 1) {
-				RecipeManagers.squeezerManager.addRecipe(10, seed, Fluids.SEED_OIL.getFluid(seedAmount));
+				RecipeManagers.squeezerManager.addRecipe(10, seed, Fluids.SEED__OIL.getFluid(seedAmount));
 			}
 			if (fruit != null && i == 2) {
 				RecipeManagers.squeezerManager.addRecipe(10, fruit, Fluids.JUICE.getFluid(juiceAmount));

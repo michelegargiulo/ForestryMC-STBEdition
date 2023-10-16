@@ -272,7 +272,7 @@ public class PluginNatura extends BlankForestryModule {
 	public void registerRecipes() {
 		int amount = ForestryAPI.activeMode.getIntegerSetting("squeezer.liquid.seed");
 		for (ItemStack seed : seeds) {
-			RecipeManagers.squeezerManager.addRecipe(10, NonNullList.from(seed, seed), Fluids.SEED_OIL.getFluid(amount));
+			RecipeManagers.squeezerManager.addRecipe(10, NonNullList.from(seed, seed), Fluids.SEED__OIL.getFluid(amount));
 			RecipeManagers.moistenerManager.addRecipe(seed, new ItemStack(Blocks.MYCELIUM), 5000);
 		}
 

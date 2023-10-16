@@ -45,7 +45,7 @@ public class PluginRustic extends CompatPlugin {
 		ItemStack grapeSeeds = getItemStack("grape_stem");
 		Block grapeLeaves = getBlock("grape_leaves");
 		if (grapeSeeds != null) {
-			RecipeManagers.squeezerManager.addRecipe(10, grapeSeeds, Fluids.SEED_OIL.getFluid(seedAmount));
+			RecipeManagers.squeezerManager.addRecipe(10, grapeSeeds, Fluids.SEED__OIL.getFluid(seedAmount));
 		}
 		if (grapes != null) {
 			RecipeManagers.squeezerManager.addRecipe(10, grapes, Fluids.JUICE.getFluid(juiceAmount / 12));
@@ -67,7 +67,7 @@ public class PluginRustic extends CompatPlugin {
 			Block block = getBlock(crops.get(i) + "_crop");
 			ItemStack fruit = getItemStack(fruitName);
 			if (seeds != null) {
-				RecipeManagers.squeezerManager.addRecipe(10, seeds, Fluids.SEED_OIL.getFluid(seedAmount));
+				RecipeManagers.squeezerManager.addRecipe(10, seeds, Fluids.SEED__OIL.getFluid(seedAmount));
 			}
 			if (fruit != null) {
 				RecipeManagers.squeezerManager.addRecipe(10, fruit, Fluids.JUICE.getFluid(juiceAmount / 25));

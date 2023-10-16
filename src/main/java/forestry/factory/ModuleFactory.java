@@ -192,7 +192,7 @@ public class ModuleFactory extends BlankForestryModule {
 				Constants.ENGINE_FUEL_VALUE_MILK, Constants.ENGINE_CYCLE_DURATION_MILK, 3));
 		}
 
-		Fluid seedOil = Fluids.SEED_OIL.getFluid();
+		Fluid seedOil = Fluids.SEED__OIL.getFluid();
 		if (seedOil != null) {
 			FuelManager.bronzeEngineFuel.put(seedOil, new EngineBronzeFuel(seedOil,
 				Constants.ENGINE_FUEL_VALUE_SEED_OIL, Constants.ENGINE_CYCLE_DURATION_SEED_OIL, 1));
@@ -384,7 +384,7 @@ public class ModuleFactory extends BlankForestryModule {
 				coreItems.mulch.getItemStack(), appleMulchAmount);
 		}
 		int seedOilAmount = ForestryAPI.activeMode.getIntegerSetting("squeezer.liquid.seed");
-		FluidStack seedOil = Fluids.SEED_OIL.getFluid(seedOilAmount);
+		FluidStack seedOil = Fluids.SEED__OIL.getFluid(seedOilAmount);
 		if (seedOil != null) {
 			RecipeManagers.squeezerManager.addRecipe(10, new ItemStack(Items.WHEAT_SEEDS), seedOil);
 			RecipeManagers.squeezerManager.addRecipe(10, new ItemStack(Items.PUMPKIN_SEEDS), seedOil);
@@ -408,7 +408,7 @@ public class ModuleFactory extends BlankForestryModule {
 		}
 		// STILL
 		FluidStack biomass = Fluids.BIOMASS.getFluid(Constants.STILL_DESTILLATION_INPUT);
-		FluidStack ethanol = Fluids.BIO_ETHANOL.getFluid(Constants.STILL_DESTILLATION_OUTPUT);
+		FluidStack ethanol = Fluids.ETHANOL.getFluid(Constants.STILL_DESTILLATION_OUTPUT);
 		if (biomass != null && ethanol != null) {
 			RecipeManagers.stillManager.addRecipe(Constants.STILL_DESTILLATION_DURATION, biomass, ethanol);
 		}
@@ -440,12 +440,12 @@ public class ModuleFactory extends BlankForestryModule {
 			RecipeManagers.fabricatorSmeltingManager.addSmelting(new ItemStack(Blocks.SANDSTONE, 1, 2), liquidGlassX4, 4800);
 		}
 		// / CARPENTER
-		RecipeManagers.carpenterManager.addRecipe(50, Fluids.SEED_OIL.getFluid(250), ItemStack.EMPTY, coreItems.impregnatedCasing.getItemStack(),
+		RecipeManagers.carpenterManager.addRecipe(50, Fluids.SEED__OIL.getFluid(250), ItemStack.EMPTY, coreItems.impregnatedCasing.getItemStack(),
 			"###",
 			"# #",
 			"###",
 			'#', "logWood");
-		RecipeManagers.carpenterManager.addRecipe(50, Fluids.SEED_OIL.getFluid(500), ItemStack.EMPTY,
+		RecipeManagers.carpenterManager.addRecipe(50, Fluids.SEED__OIL.getFluid(500), ItemStack.EMPTY,
 			new ItemStack(coreBlocks.escritoire),
 			"#  ",
 			"###",
@@ -453,7 +453,7 @@ public class ModuleFactory extends BlankForestryModule {
 			'#', "plankWood");
 
 		// RESOURCES
-		RecipeManagers.carpenterManager.addRecipe(10, Fluids.SEED_OIL.getFluid(100), ItemStack.EMPTY,
+		RecipeManagers.carpenterManager.addRecipe(10, Fluids.SEED__OIL.getFluid(100), ItemStack.EMPTY,
 			coreItems.stickImpregnated.getItemStack(2),
 			"#",
 			"#",

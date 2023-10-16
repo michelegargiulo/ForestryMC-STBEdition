@@ -81,7 +81,7 @@ for.flowers.vanilla=Цветы
 for.flowers.wheat=Пшеница
 for.flowers.snow=Зимние
 
-fluid.bio.ethanol=Этанол
+fluid.ethanol=Этанол
 fluid.biomass=Биомасса
 fluid.glass=Жидкое стекло
 fluid.for.honey=Мёд
@@ -89,9 +89,9 @@ fluid.ice=Молотый лёд
 fluid.juice=Фруктовый сок
 fluid.short.mead=Питный мёд
 fluid.milk=Молоко
-fluid.seed.oil=Растительное масло
+fluid.seed_oil=Растительное масло
 
-item.forge.bucketFilled.bio.ethanol=Ведро этанола
+item.forge.bucketFilled.ethanol=Ведро этанола
 item.forge.bucketFilled.biomass=Ведро биомассы
 item.forge.bucketFilled.glass=Ведро жидкого стекла
 item.forge.bucketFilled.for.honey=Ведро мёда
@@ -99,9 +99,9 @@ item.forge.bucketFilled.ice=Ведро молотого льда
 item.forge.bucketFilled.juice=Ведро фруктового сока
 item.forge.bucketFilled.short.mead=Ведро питного мёда
 item.forge.bucketFilled.milk=Ведро молока
-item.forge.bucketFilled.seed.oil=Ведро растительного масла
+item.forge.bucketFilled.seed_oil=Ведро растительного масла
 
-tile.forestry.fluid.bio.ethanol.name=Этанол
+tile.forestry.fluid.ethanol.name=Этанол
 tile.forestry.fluid.biomass.name=Биомасса
 tile.forestry.fluid.glass.name=Жидкое стекло
 tile.forestry.fluid.for.honey.name=Мёд
@@ -109,7 +109,7 @@ tile.forestry.fluid.ice.name=Молотый лёд
 tile.forestry.fluid.juice.name=Фруктовый сок
 tile.forestry.fluid.short.mead.name=Питный мёд
 tile.forestry.fluid.milk.name=Молоко
-tile.forestry.fluid.seed.oil.name=Растительное масло
+tile.forestry.fluid.seed_oil.name=Растительное масло
 
 for.gui.access=Доступ
 for.gui.active=Активно

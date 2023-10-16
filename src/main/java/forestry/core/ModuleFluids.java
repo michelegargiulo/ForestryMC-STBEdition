@@ -49,6 +49,8 @@ import forestry.core.utils.Log;
 import forestry.modules.BlankForestryModule;
 import forestry.modules.ForestryModuleUids;
 
+import java.util.Locale;
+
 @ForestryModule(containerID = Constants.MOD_ID, moduleID = ForestryModuleUids.FLUIDS, name = "Fluids", author = "mezz", url = Constants.URL, unlocalizedDescription = "for.module.fluids.description")
 public class ModuleFluids extends BlankForestryModule {
 	@Nullable
@@ -134,7 +136,7 @@ public class ModuleFluids extends BlankForestryModule {
 			RecipeManagers.squeezerManager.addContainerRecipe(10, getItems().refractoryEmpty.getItemStack(), itemRegistryCore.refractoryWax.getItemStack(), 0.10f);
 		}
 
-		FluidStack ethanol = Fluids.BIO_ETHANOL.getFluid(1);
+		FluidStack ethanol = Fluids.ETHANOL.getFluid(1);
 		if (ethanol != null) {
 			GeneratorFuel ethanolFuel = new GeneratorFuel(ethanol, (int) (32 * ForestryAPI.activeMode.getFloatSetting("fuel.ethanol.generator")), 4);
 			FuelManager.generatorFuel.put(ethanol.getFluid(), ethanolFuel);

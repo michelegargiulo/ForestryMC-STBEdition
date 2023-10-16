@@ -38,19 +38,19 @@ import forestry.core.render.ForestryResource;
 
 public enum Fluids {
 
-	BIO_ETHANOL(new Color(255, 111, 0), 790, 1000) {
+	ETHANOL(new Color(255, 111, 0), 790, 1000, "ethanol") {
 		@Override
 		public Block makeBlock() {
 			return new BlockForestryFluid(this, 300, true);
 		}
 	},
-	BIOMASS(new Color(100, 132, 41), 400, 6560) {
+	BIOMASS(new Color(100, 132, 41), 400, 6560, "biomass") {
 		@Override
 		public Block makeBlock() {
 			return new BlockForestryFluid(this, 100, true);
 		}
 	},
-	GLASS(new Color(164, 164, 164), 2400, 10000) {
+	GLASS(new Color(164, 164, 164), 2400, 10000, "glass") {
 		@Override
 		public int getTemperature() {
 			return 1200;
@@ -61,7 +61,7 @@ public enum Fluids {
 			return new BlockForestryFluid(this, 0, true);
 		}
 	},
-	FOR_HONEY(new Color(255, 196, 35), 1420, 75600) {
+	FOR_HONEY(new Color(255, 196, 35), 1420, 75600, "for.honey") {
 		@Override
 		public Block makeBlock() {
 			return new BlockForestryFluid(this);
@@ -72,7 +72,7 @@ public enum Fluids {
 			return new DrinkProperties(2, 0.2f, 64);
 		}
 	},
-	ICE(new Color(175, 242, 255), 520, 1000) {
+	ICE(new Color(175, 242, 255), 520, 1000, "ice") {
 		@Override
 		public int getTemperature() {
 			return 265;
@@ -83,7 +83,7 @@ public enum Fluids {
 			return new BlockForestryFluid(this);
 		}
 	},
-	JUICE(new Color(168, 201, 114)) {
+	JUICE(new Color(168, 201, 114), "juice") {
 		@Override
 		public Block makeBlock() {
 			return new BlockForestryFluid(this);
@@ -94,7 +94,7 @@ public enum Fluids {
 			return new DrinkProperties(2, 0.2f, 32);
 		}
 	},
-	MILK(new Color(255, 255, 255), 1030, 3000) {
+	MILK(new Color(255, 255, 255), 1030, 3000, "milk") {
 		@Override
 		public Block makeBlock() {
 			return new BlockForestryFluid(this);
@@ -108,13 +108,13 @@ public enum Fluids {
 			);
 		}
 	},
-	SEED_OIL(new Color(255, 255, 168), 885, 5000) {
+	SEED__OIL(new Color(255, 255, 168), 885, 5000, "seed_oil") {
 		@Override
 		public Block makeBlock() {
 			return new BlockForestryFluid(this, 2, true);
 		}
 	},
-	SHORT_MEAD(new Color(239, 154, 56), 1000, 1200) {
+	SHORT_MEAD(new Color(239, 154, 56), 1000, 1200, "short.mead") {
 		@Override
 		public Block makeBlock() {
 			return new BlockForestryFluid(this, 4, true);
@@ -142,12 +142,12 @@ public enum Fluids {
 
 	private final ResourceLocation[] resources = new ResourceLocation[2];
 
-	Fluids(Color particleColor) {
-		this(particleColor, 1000, 1000);
+	Fluids(Color particleColor, String tag) {
+		this(particleColor, 1000, 1000, tag);
 	}
 
-	Fluids(Color particleColor, int density, int viscosity) {
-		this.tag = name().toLowerCase(Locale.ENGLISH).replace('_', '.');
+	Fluids(Color particleColor, int density, int viscosity, String tag) {
+		this.tag = tag;
 		this.particleColor = particleColor;
 		this.density = density;
 		this.viscosity = viscosity;
