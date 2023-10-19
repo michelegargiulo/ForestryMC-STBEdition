@@ -20,9 +20,9 @@ import net.minecraft.world.World;
 import java.util.List;
 import java.util.Random;
 
-public class WorldGenKiwi extends WorldGenTree {
+public class WorldGenChironja extends WorldGenTree {
 
-	public WorldGenKiwi(ITreeGenData tree) {
+	public WorldGenChironja(ITreeGenData tree) {
 		super(tree, 6, 2);
 	}
 

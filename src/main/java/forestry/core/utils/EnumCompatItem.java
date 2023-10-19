@@ -7,24 +7,35 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
+import javax.annotation.Nullable;
+
 public enum EnumCompatItem {
     ASH(ModuleCore.getItems().ash, Config.dustAshItem, Config.dustAshItemMeta),
     ;
 
-    private ItemStack finalItemStack;
+    private final Item defaultItem;
+    private final String regName;
+    private final int meta;
+
+    @Nullable
+    private Item customItem;
 
     EnumCompatItem(Item defaultItem, String configItem, int configItemMeta) {
-        ResourceLocation location = new ResourceLocation(configItem);
-        if (ForgeRegistries.ITEMS.containsKey(location)) {
-            this.finalItemStack = new ItemStack(ForgeRegistries.ITEMS.getValue(location));
-            this.finalItemStack.setItemDamage(configItemMeta);
-        } else {
-            this.finalItemStack = new ItemStack(defaultItem);
-        }
+        this.defaultItem = defaultItem;
+        this.regName = configItem;
+        this.meta = configItemMeta;
+        customItem = null;
     }
 
     public Item getFinalItem() {
-        return finalItemStack.getItem();
+        ResourceLocation location = new ResourceLocation(regName);
+        if (customItem != null) {
+            return customItem;
+        } else if (ForgeRegistries.ITEMS.containsKey(location)) {
+            customItem = ForgeRegistries.ITEMS.getValue(location);
+            return customItem;
+        }
+        return defaultItem;
     }
 
     public ItemStack getFinalItemStack() {
@@ -32,6 +43,6 @@ public enum EnumCompatItem {
     }
 
     public ItemStack getFinalItemStack(int amount) {
-        return new ItemStack(finalItemStack.getItem(), amount);
+        return new ItemStack(getFinalItem(), amount, meta);
     }
 }

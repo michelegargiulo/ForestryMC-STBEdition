@@ -61,7 +61,7 @@ public enum EnumForestryWoodType implements IWoodType {
 	HAZELNUT,
 	JACKFRUIT,
 	JUJUBA,
-	KIWI,
+	CHIRONJA,
 	LIME,
 	LYCHEE,
 	MANGO,

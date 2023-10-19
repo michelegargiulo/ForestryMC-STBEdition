@@ -311,7 +311,7 @@ public class ModuleArboriculture extends BlankForestryModule {
 		crateRegistry.registerCrate(EnumFruit.HAZELNUT.getStack());
 		crateRegistry.registerCrate(EnumFruit.JACKFRUIT.getStack());
 		crateRegistry.registerCrate(EnumFruit.JUJUBA.getStack());
-		crateRegistry.registerCrate(EnumFruit.KIWI.getStack());
+		crateRegistry.registerCrate(EnumFruit.CHIRONJA.getStack());
 		crateRegistry.registerCrate(EnumFruit.LIME.getStack());
 		crateRegistry.registerCrate(EnumFruit.LYCHEE.getStack());
 		crateRegistry.registerCrate(EnumFruit.MANGO.getStack());

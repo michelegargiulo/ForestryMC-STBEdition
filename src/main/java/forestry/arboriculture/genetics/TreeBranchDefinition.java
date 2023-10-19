@@ -87,7 +87,6 @@ public enum TreeBranchDefinition implements IBranchDefinition {
 	SAPINDACEAE,
 
 	// Custom
-	ACTINIDIACEAE,
 	TAXACEAE,
 
 	/*

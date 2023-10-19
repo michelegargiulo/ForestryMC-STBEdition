@@ -54,7 +54,7 @@ public class AlleleFruits {
 	public static final IAlleleFruit fruitHazelnut;
 	public static final IAlleleFruit fruitJackfruit;
 	public static final IAlleleFruit fruitJujuba;
-	public static final IAlleleFruit fruitKiwi;
+	public static final IAlleleFruit fruitChironja;
 	public static final IAlleleFruit fruitLime;
 	public static final IAlleleFruit fruitLychee;
 	public static final IAlleleFruit fruitMango;
@@ -159,8 +159,8 @@ public class AlleleFruits {
 			fruitJujuba = new AlleleFruit("jujuba", new FruitProviderRipening("for.fruits.jujuba", PRUNES, EnumFruit.JUJUBA.getStack(), 1.0f)
 					.setColours(new Color(0xcf4730), new Color(0x7fbf54))
 					.setOverlay("berries"), true),
-			fruitKiwi = new AlleleFruit("kiwi", new FruitProviderRipening("for.fruits.kiwi", PRUNES, EnumFruit.KIWI.getStack(), 1.0f)
-					.setColours(new Color(0x635036), new Color(0x75ba50))
+			fruitChironja = new AlleleFruit("chironja", new FruitProviderRipening("for.fruits.chironja", PRUNES, EnumFruit.CHIRONJA.getStack(), 1.0f)
+					.setColours(new Color(0xdde33d), new Color(0x42f54e))
 					.setOverlay("nuts"), true),
 			fruitLime = new AlleleFruit("lime", new FruitProviderRipening("for.fruits.lime", PRUNES, EnumFruit.LIME.getStack(), 1.0f)
 					.setColours(new Color(0x37d90f), new Color(0x9acf30))

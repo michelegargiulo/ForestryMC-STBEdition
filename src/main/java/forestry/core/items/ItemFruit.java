@@ -12,14 +12,11 @@ package forestry.core.items;
 
 import java.util.Locale;
 
-import forestry.core.config.Config;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -55,7 +52,7 @@ public class ItemFruit extends ItemForestryFood {
 		HAZELNUT(OreDictUtil.CROP_HAZELNUT),
 		JACKFRUIT(OreDictUtil.CROP_JACKFRUIT),
 		JUJUBA(OreDictUtil.CROP_JUJUBA),
-		KIWI(OreDictUtil.CROP_KIWI),
+		CHIRONJA(OreDictUtil.CROP_CHIRONJA),
 		LIME(OreDictUtil.CROP_LIME),
 		LYCHEE(OreDictUtil.CROP_LYCHEE),
 		MANGO(OreDictUtil.CROP_MANGO),

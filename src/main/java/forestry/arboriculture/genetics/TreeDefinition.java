@@ -1465,10 +1465,10 @@ public enum TreeDefinition implements ITreeDefinition, ITreeGenerator, IStringSe
 			return true;
 		}
 	},
-	Kiwi(TreeBranchDefinition.ACTINIDIACEAE, "kiwi", "deliciosa", true, EnumLeafType.DECIDUOUS, new Color(0x239635), new Color(0x70B839), EnumForestryWoodType.KIWI) {
+	Chironja(TreeBranchDefinition.CITRUS, "chironja", "orangelo", true, EnumLeafType.DECIDUOUS, new Color(0x239635), new Color(0x70B839), EnumForestryWoodType.CHIRONJA) {
 		@Override
 		public WorldGenerator getWorldGenerator(ITreeGenData tree) {
-			return new WorldGenKiwi(tree);
+			return new WorldGenChironja(tree);
 		}
 
 		@Override
@@ -1482,7 +1482,7 @@ public enum TreeDefinition implements ITreeDefinition, ITreeGenerator, IStringSe
 
 		@Override
 		protected void setAlleles(IAllele[] alleles) {
-			AlleleHelper.getInstance().set(alleles, EnumTreeChromosome.FRUITS, AlleleFruits.fruitKiwi);
+			AlleleHelper.getInstance().set(alleles, EnumTreeChromosome.FRUITS, AlleleFruits.fruitChironja);
 			AlleleHelper.getInstance().set(alleles, EnumTreeChromosome.YIELD, EnumAllele.Yield.LOWER);
 			AlleleHelper.getInstance().set(alleles, EnumTreeChromosome.SAPPINESS, EnumAllele.Sappiness.AVERAGE);
 			AlleleHelper.getInstance().set(alleles, EnumTreeChromosome.HEIGHT, EnumAllele.Height.SMALLEST);
@@ -1490,7 +1490,7 @@ public enum TreeDefinition implements ITreeDefinition, ITreeGenerator, IStringSe
 
 		@Override
 		protected void registerMutations() {
-			registerMutation(Cedar, Pawpaw, 5);
+			registerMutation(Orange, Grapefruit, 5);
 		}
 
 		@Override
