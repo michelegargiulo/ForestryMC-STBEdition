@@ -3,8 +3,8 @@ package forestry.arboriculture.blocks;
 import forestry.api.core.IItemModelRegister;
 import forestry.api.core.IModelManager;
 import forestry.api.core.IStateMapperRegister;
-import forestry.core.ModuleCore;
 import forestry.core.config.Constants;
+import forestry.core.utils.EnumCompatItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.EnumPushReaction;
@@ -78,7 +78,7 @@ public class BlockAsh extends Block implements IStateMapperRegister, IItemModelR
 				amount += rand.nextInt(1 + fortune);
 			}
 			drops.add(new ItemStack(Items.COAL, amount, 1));
-			drops.add(new ItemStack(ModuleCore.getItems().ash, 1 + rand.nextInt(Math.max(amount / 4, 1))));
+			drops.add(new ItemStack(EnumCompatItem.ASH.getFinalItem(), 1 + rand.nextInt(Math.max(amount / 4, 1))));
 		}
 	}
 

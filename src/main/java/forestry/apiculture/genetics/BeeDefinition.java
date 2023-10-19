@@ -10,28 +10,7 @@
  ******************************************************************************/
 package forestry.apiculture.genetics;
 
-import javax.annotation.Nullable;
-import java.awt.Color;
-import java.util.Arrays;
-import java.util.EnumSet;
-import java.util.Locale;
-
-import org.apache.commons.lang3.text.WordUtils;
-
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.common.MinecraftForge;
-
-import forestry.api.apiculture.BeeManager;
-import forestry.api.apiculture.EnumBeeChromosome;
-import forestry.api.apiculture.EnumBeeType;
-import forestry.api.apiculture.IAlleleBeeSpecies;
-import forestry.api.apiculture.IAlleleBeeSpeciesBuilder;
-import forestry.api.apiculture.IBee;
-import forestry.api.apiculture.IBeeGenome;
-import forestry.api.apiculture.IBeeMutationBuilder;
+import forestry.api.apiculture.*;
 import forestry.api.core.EnumHumidity;
 import forestry.api.core.EnumTemperature;
 import forestry.api.genetics.AlleleSpeciesRegisterEvent;
@@ -44,6 +23,18 @@ import forestry.core.ModuleCore;
 import forestry.core.config.Constants;
 import forestry.core.genetics.alleles.AlleleHelper;
 import forestry.core.genetics.alleles.EnumAllele;
+import forestry.core.utils.EnumCompatItem;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.MinecraftForge;
+import org.apache.commons.lang3.text.WordUtils;
+
+import javax.annotation.Nullable;
+import java.awt.*;
+import java.util.Arrays;
+import java.util.EnumSet;
+import java.util.Locale;
 
 public enum BeeDefinition implements IBeeDefinition {
 	/* HONEY BRANCH */
@@ -329,7 +320,7 @@ public enum BeeDefinition implements IBeeDefinition {
 		@Override
 		protected void setSpeciesProperties(IAlleleBeeSpeciesBuilder beeSpecies) {
 			beeSpecies.addProduct(ModuleApiculture.getItems().beeComb.get(EnumHoneyComb.SIMMERING, 1), 0.55f)
-				.addProduct(ModuleCore.getItems().ash.getItemStack(), 0.15f)
+				.addProduct(EnumCompatItem.ASH.getFinalItemStack(), 0.15f)
 				.setTemperature(EnumTemperature.HELLISH)
 				.setHumidity(EnumHumidity.ARID);
 		}

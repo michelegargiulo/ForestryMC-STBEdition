@@ -3,6 +3,7 @@ package forestry.arboriculture.charcoal.jei;
 import com.google.common.collect.ImmutableList;
 
 import forestry.core.config.Config;
+import forestry.core.utils.EnumCompatItem;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -29,13 +30,7 @@ public class CharcoalPileWallWrapper implements IRecipeWrapper {
 		ingredients.setInputs(VanillaTypes.ITEM, pileWall.getDisplayItems());
 		int amount = 9 + pileWall.getCharcoalAmount();
 		ItemStack charcoal = new ItemStack(Items.COAL, amount, 1);
-		ItemStack ash = new ItemStack(ModuleCore.getItems().ash, amount / 4);
-
-		// Read the item from the config. If there are any problems, revert back to Forestry Ash
-		Item secItem = ForgeRegistries.ITEMS.getValue(new ResourceLocation(Config.charcoalPitSecondaryItem));
-		if (secItem != null) {
-			ash = new ItemStack(secItem, 1, Config.charcoalPitSecondaryItemMeta);
-		}
+		ItemStack ash = EnumCompatItem.ASH.getFinalItemStack(amount / 4);
 
 		ImmutableList<ItemStack> outputs = ImmutableList.of(
 			charcoal,

@@ -1890,6 +1890,9 @@ for.config.tweaks.charcoal.check.range.comment=Sets the amount of blocks that th
 for.config.tweaks.book.spawn=Forester's Manual
 for.config.tweaks.book.spawn.comment=Players who enter the world for the first time get a Forester's Manual.
 
+for.config.tweaks.compatitems.ash.item=The Compat Ash Item, in format modid:registry_name (For example, minecraft:gold_ingot)
+for.config.tweaks.compatitems.ash.meta=The Compat Ash Item meta
+
 for.config.genetics=Genetics
 for.config.genetics.pollinate.vanilla.trees=Pollinate Vanilla Trees
 for.config.genetics.pollinate.vanilla.trees.comment=Allow bees to pollinate vanilla tree leaves. When disabled, vanilla trees must be analyzed before they can be pollinated.

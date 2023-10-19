@@ -14,6 +14,7 @@ import javax.annotation.Nonnull;
 import java.io.IOException;
 import java.util.Collection;
 
+import forestry.core.utils.EnumCompatItem;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
@@ -32,7 +33,6 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import forestry.api.fuels.FuelManager;
-import forestry.core.ModuleCore;
 import forestry.core.blocks.BlockBase;
 import forestry.core.config.Constants;
 import forestry.core.errors.EnumErrorCode;
@@ -86,7 +86,7 @@ public class TileEnginePeat extends TileEngine implements ISidedInventory {
 				return i;
 			}
 
-			if (waste.getItem() != ModuleCore.getItems().ash) {
+			if (waste.getItem() != EnumCompatItem.ASH.getFinalItem()) {
 				continue;
 			}
 
@@ -193,7 +193,7 @@ public class TileEnginePeat extends TileEngine implements ISidedInventory {
 			IInventoryAdapter inventory = getInternalInventory();
 			ItemStack wasteStack = inventory.getStackInSlot(wasteSlot);
 			if (wasteStack.isEmpty()) {
-				inventory.setInventorySlotContents(wasteSlot, ModuleCore.getItems().ash.getItemStack());
+				inventory.setInventorySlotContents(wasteSlot, EnumCompatItem.ASH.getFinalItemStack());
 			} else {
 				wasteStack.grow(1);
 			}

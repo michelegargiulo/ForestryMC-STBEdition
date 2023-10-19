@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "forestry:items/fruits/kiwi"
+        "layer0": "forestry:items/fruits/chironja"
     }
 }
