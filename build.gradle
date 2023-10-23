@@ -16,7 +16,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'idea'
 apply plugin: 'maven'
 
-version = '5.8.6b'
+version = '5.8.6c'
 if (project.hasProperty('buildQualifier')) {
 	version = project.version + '-' + project.buildQualifier
 }

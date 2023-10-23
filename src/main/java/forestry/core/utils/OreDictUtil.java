@@ -91,7 +91,7 @@ public class OreDictUtil {
 	public static final String CROP_SOURSOP = "cropSoursop";
 	public static final String CROP_STARFRUIT = "cropStarfruit";
 	public static final String CROP_TAMARIND = "cropTamarind";
-	public static final String CROP_VANILLA = "cropVanilla";
+	public static final String CROP_VANILLA = "cropVanillabean";
 
 	// public static final String CROP_LAMBER_CHERRY = "cropLamberCherry";
 	// public static final String CROP_PURPLE_PERSHORE_PLUM = "crop";
