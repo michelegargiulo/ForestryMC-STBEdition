@@ -1008,8 +1008,8 @@ public enum TreeDefinition implements ITreeDefinition, ITreeGenerator, IStringSe
 
 		@Override
 		protected void setSpeciesProperties(IAlleleTreeSpeciesBuilder treeSpecies) {
-			treeSpecies.addFruitFamily(EnumFruitFamily.JUNGLE)
-					.addFruitFamily(EnumFruitFamily.PRUNES)
+			treeSpecies.addFruitFamily(EnumFruitFamily.PRUNES)
+					.addFruitFamily(EnumFruitFamily.POMES)
 					.setTemperature(EnumTemperature.WARM)
 					.setHumidity(EnumHumidity.DAMP);
 		}
@@ -1025,6 +1025,11 @@ public enum TreeDefinition implements ITreeDefinition, ITreeGenerator, IStringSe
 		@Override
 		protected void registerMutations() {
 			registerMutation(Papaya, Apricot, 5);
+		}
+
+		@Override
+		public boolean hasFruitLeaves() {
+			return true;
 		}
 	},
 	Banana(TreeBranchDefinition.MUSA, "banana", "acuminata", true, EnumLeafType.PALM, new Color(0x3ACD42), new Color(0x99F340), EnumForestryWoodType.BANANA) {
